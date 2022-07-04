@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Free Games</string>
+    <string name="games_title">Trending free games</string>
+    <string name="games">Games</string>
+    <string name="play_later">Play Later</string>
+    <string name="profile">Profile</string>
+</resources>
