@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/gameDetailsFragment"
-        android:name="br.com.cwi.freegames.GameDetailsFragment"
+        android:name="br.com.cwi.freegames.presentation.feature.games.GameDetailsFragment"
         android:label="fragment_game_details"
         tools:layout="@layout/fragment_game_details" />
 </navigation>

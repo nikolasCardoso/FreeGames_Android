@@ -43,6 +43,8 @@ class GamesFragment : Fragment() {
                 }
             )
         }
+
+        viewModel.fetchGames()
     }
 
     private fun navigateToGameDetails(gameId: Int) {

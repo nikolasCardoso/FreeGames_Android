@@ -26,7 +26,6 @@
             android:exported="false" />
         <activity
             android:name=".presentation.feature.games.GamesHostActivity"
-            android:theme="@style/Theme.FreeGames.NoActionBar"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

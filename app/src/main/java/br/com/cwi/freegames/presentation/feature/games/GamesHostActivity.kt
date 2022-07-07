@@ -1,5 +1,6 @@
 package br.com.cwi.freegames.presentation.feature.games
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -23,13 +24,32 @@ class GamesHostActivity : BaseBottomNavigation() {
 
     override fun getBottomNavigation(): BottomNavigationView = binding.bottomNavigation
 
+    @SuppressLint("RestrictedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityHostGamesBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setupNavController()
 
-        viewModel.fetchGames()
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setShowHideAnimationEnabled(false)
+    }
 
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
+
+    private fun setupNavController() {
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when(destination.id){
+                R.id.gamesFragment ->
+                    supportActionBar?.hide()
+                R.id.gameDetailsFragment -> {
+                    supportActionBar?.show()
+                }
+            }
+        }
     }
 }

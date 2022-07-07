@@ -19,6 +19,11 @@ class GamesAdapter(
     override fun onBindViewHolder(holder: GamesViewHolder, position: Int) {
         val game = gamesList[position]
 
+        holder.itemView.setOnClickListener {
+            onGameClick(game.id)
+            println("teste")
+        }
+
         holder.bind(game)
     }
 

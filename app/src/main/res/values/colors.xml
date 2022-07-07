@@ -10,4 +10,6 @@
 
     <color name="menu_color">#293B5F</color>
     <color name="white_70_opacity">#B3FFFFFF</color>
+    <color name="green_clickable">#7CB562</color>
+    <color name="grey_light">#656565</color>
 </resources>
