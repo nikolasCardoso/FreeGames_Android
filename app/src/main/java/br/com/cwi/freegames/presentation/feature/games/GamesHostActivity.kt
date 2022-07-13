@@ -7,6 +7,7 @@ import androidx.navigation.fragment.findNavController
 import br.com.cwi.freegames.R
 import br.com.cwi.freegames.databinding.ActivityHostGamesBinding
 import br.com.cwi.freegames.presentation.base.BaseBottomNavigation
+import br.com.cwi.freegames.presentation.extension.visibleOrGone
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -24,16 +25,29 @@ class GamesHostActivity : BaseBottomNavigation() {
 
     override fun getBottomNavigation(): BottomNavigationView = binding.bottomNavigation
 
-    @SuppressLint("RestrictedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityHostGamesBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setupNavController()
 
+        setupNavController()
+        setupViewModel()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setShowHideAnimationEnabled(false)
+    }
+
+    private fun setupViewModel() {
+        viewModel.loading.observe(this){ isLoading ->
+            binding.viewLoading.root.visibleOrGone(isLoading)
+        }
+
+        viewModel.error.observe(this){ hasError ->
+            binding.viewError.root.visibleOrGone(hasError)
+            binding.viewError.tvRefresh.setOnClickListener {
+                finish()
+                startActivity(intent)
+            }
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -41,13 +55,19 @@ class GamesHostActivity : BaseBottomNavigation() {
         return true
     }
 
+    @SuppressLint("RestrictedApi")
     private fun setupNavController() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when(destination.id){
-                R.id.gamesFragment ->
+                R.id.gamesFragment -> {
                     supportActionBar?.hide()
+                }
                 R.id.gameDetailsFragment -> {
                     supportActionBar?.show()
+                    viewModel.gameDetails.observe(this){ game ->
+                        supportActionBar?.title = game.title
+                    }
+                    supportActionBar?.setShowHideAnimationEnabled(false)
                 }
             }
         }

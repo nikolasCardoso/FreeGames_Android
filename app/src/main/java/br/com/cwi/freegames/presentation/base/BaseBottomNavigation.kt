@@ -4,8 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import br.com.cwi.freegames.R
 import br.com.cwi.freegames.presentation.feature.games.GamesHostActivity
-import br.com.cwi.freegames.presentation.feature.play_later.PlayLaterActivity
-import br.com.cwi.freegames.presentation.feature.profile.ProfileActivity
+import br.com.cwi.freegames.presentation.feature.play_later.PlayLaterHostActivity
+import br.com.cwi.freegames.presentation.feature.profile.ProfileHostActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 abstract class BaseBottomNavigation: AppCompatActivity() {
@@ -33,10 +33,10 @@ abstract class BaseBottomNavigation: AppCompatActivity() {
                     startActivity(Intent(this, GamesHostActivity::class.java))
                 }
                 R.id.menu_play_later -> {
-                    startActivity(Intent(this, PlayLaterActivity::class.java))
+                    startActivity(Intent(this, PlayLaterHostActivity::class.java))
                 }
                 R.id.menu_profile -> {
-                    startActivity(Intent(this, ProfileActivity::class.java))
+                    startActivity(Intent(this, ProfileHostActivity::class.java))
                 }
             }
 

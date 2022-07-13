@@ -12,4 +12,7 @@
     <color name="white_70_opacity">#B3FFFFFF</color>
     <color name="green_clickable">#7CB562</color>
     <color name="grey_light">#656565</color>
+    <color name="grey">#D0D0D0</color>
+    <color name="grey_super_light">#f3f3f3</color>
+    <color name="base_color">#f1f1f1</color>
 </resources>

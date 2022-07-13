@@ -3,18 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/drawable/bottom_nav_color_selector.xml" value="0.216" />
         <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/drawable/game_thumb_gradient.xml" value="0.2075" />
+        <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/drawable/game_thumb_gradient_foreground.xml" value="0.216" />
         <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/activity_games.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/activity_host_games.xml" value="0.2583862194016319" />
+        <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/activity_host_play_later.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/activity_host_profile.xml" value="0.14709569577935647" />
         <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/activity_play_later.xml" value="0.3009833262077811" />
-        <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/activity_profile.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/activity_profile.xml" value="0.33" />
+        <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/fragment_edit_profile.xml" value="0.2894399315946986" />
         <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/fragment_game_details.xml" value="0.33" />
         <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/fragment_games.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/fragment_play_later.xml" value="0.3009833262077811" />
+        <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/fragment_profile.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/item_game_thumbnail.xml" value="0.33" />
+        <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/item_play_later_game.xml" value="0.30012825994014536" />
+        <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/view_error.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/view_game_details_additional_info.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/view_game_details_buttons.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/view_game_details_min_sys_req.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/view_game_details_title_card.xml" value="0.30012825994014536" />
+        <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/layout/view_loading.xml" value="0.27049180327868855" />
+        <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames-Android/FreeGames_Android/app/src/main/res/xml/provider_file.xml" value="0.3009833262077811" />
         <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames/app/src/main/res/drawable/bottom_nav_color_selector.xml" value="0.2075" />
         <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2075" />
         <entry key="..\:/Users/nikol/AndroidStudioProjects/treinamentoMobile/FreeGames/app/src/main/res/drawable/ic_profile.xml" value="0.2075" />

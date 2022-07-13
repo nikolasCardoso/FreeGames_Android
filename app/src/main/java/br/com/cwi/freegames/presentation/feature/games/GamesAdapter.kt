@@ -12,6 +12,7 @@ class GamesAdapter(
     private val gamesList: List<Game>,
     private val onGameClick: (id: Int) -> Unit
 ) : RecyclerView.Adapter<GamesViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GamesViewHolder {
         return GamesViewHolder(inflateView(R.layout.item_game_thumbnail,parent))
     }
@@ -21,7 +22,6 @@ class GamesAdapter(
 
         holder.itemView.setOnClickListener {
             onGameClick(game.id)
-            println("teste")
         }
 
         holder.bind(game)

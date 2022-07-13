@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_play_later">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_play_later"
+    app:startDestination="@id/playLaterFragment">
+
+    <fragment
+        android:id="@+id/playLaterFragment"
+        android:name="br.com.cwi.freegames.presentation.feature.play_later.PlayLaterFragment"
+        android:label="PlayLaterFragment" >
+        <action
+            android:id="@+id/action_playLaterFragment_to_gameDetailsFragment2"
+            app:destination="@id/gameDetailsFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameDetailsFragment2"
+        android:name="br.com.cwi.freegames.presentation.feature.games.GameDetailsFragment"
+        android:label="fragment_game_details"
+        tools:layout="@layout/fragment_game_details" />
 
 </navigation>

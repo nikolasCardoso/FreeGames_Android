@@ -6,7 +6,7 @@ data class GameDetailsResponse(
     @Json(name = "id") val id: Int,
     @Json(name = "title") val title: String,
     @Json(name = "thumbnail") val thumbnail: String?,
-    @Json(name = "short_description") val short_description: String?,
+    @Json(name = "short_description") val description: String?,
     @Json(name = "game_url") val game_url: String?,
     @Json(name = "genre") val genre: String?,
     @Json(name = "platform") val platform: String?,

@@ -4,27 +4,36 @@ import br.com.cwi.freegames.data.network.entity.GameDetailsResponse
 import br.com.cwi.freegames.data.network.entity.GameResponse
 import br.com.cwi.freegames.data.network.entity.MinSystemRequirementsResponse
 import br.com.cwi.freegames.domain.entity.Game
-import br.com.cwi.freegames.domain.entity.GameDetails
 import br.com.cwi.freegames.domain.entity.GameMinSystemRequirements
 
-fun GameResponse.toEntity() = Game(
-    id, title, thumbnail , genre, description, platform
+fun GameResponse.toDomain() = Game(
+    id = id,
+    title = title,
+    thumbnail = thumbnail ,
+    genre = genre,
+    description = description,
+    platform = platform,
+    game_url = null,
+    publisher = null,
+    developer = null,
+    release_date = null,
+    min_system_requirements = null
 )
 
-fun GameDetailsResponse.toEntity() = GameDetails(
-    id,
-    title,
-    thumbnail,
-    short_description,
-    game_url,
-    genre,
-    platform,
-    publisher,
-    developer,
-    release_date,
-    min_system_requirements?.toEntity()
+fun GameDetailsResponse.toDomain() = Game(
+    id = id,
+    title = title,
+    thumbnail = thumbnail,
+    genre = genre,
+    description = description,
+    platform = platform,
+    game_url = game_url,
+    publisher = publisher,
+    developer = developer,
+    release_date = release_date,
+    min_system_requirements = min_system_requirements?.toDomain()
 )
 
-fun MinSystemRequirementsResponse.toEntity() = GameMinSystemRequirements(
+fun MinSystemRequirementsResponse.toDomain() = GameMinSystemRequirements(
     os, processor, memory, graphics, storage
 )
