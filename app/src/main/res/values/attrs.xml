@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GameInformationComponent" >
+        <attr name="component_title_information" format="reference" />
+    </declare-styleable>
+</resources>

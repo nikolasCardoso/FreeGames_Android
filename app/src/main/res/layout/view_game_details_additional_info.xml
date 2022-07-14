@@ -2,8 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto" >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:padding="10dp"
@@ -11,171 +10,75 @@
         android:layout_height="wrap_content" >
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/additional_information"
+            android:id="@+id/tv_additional_information"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@string/additional_information"
-            android:textStyle="bold"
-            android:textSize="20sp"
             android:textColor="@color/black"
-            android:gravity="center"
-            app:layout_constraintTop_toTopOf="parent"/>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/ll_developer"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginTop="8dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingVertical="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/ll_publisher"
-            app:layout_constraintTop_toBottomOf="@id/additional_information">
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_developer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/developer"
-                android:gravity="center"
-                android:textColor="@color/grey_light"
-                android:textSize="18sp" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_game_developer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:gravity="center"
-                tools:text="teste" />
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/ll_publisher"
+        <br.com.cwi.freegames.presentation.component.GameInformationComponent
+            android:id="@+id/component_developer"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            app:layout_constraintEnd_toStartOf="@id/ll_platform"
-            app:layout_constraintStart_toEndOf="@id/ll_developer"
-            app:layout_constraintTop_toTopOf="@id/ll_developer">
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="5dp"
+            app:component_title_information="@string/developer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/component_release_date"
+            app:layout_constraintEnd_toStartOf="@id/component_publisher"
+            app:layout_constraintTop_toBottomOf="@id/tv_additional_information" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/publisher"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/publisher"
-                android:textColor="@color/grey_light"
-                android:textSize="18sp" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_game_publisher"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:gravity="center"
-                tools:text="teste" />
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/ll_platform"
+        <br.com.cwi.freegames.presentation.component.GameInformationComponent
+            android:id="@+id/component_publisher"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
+            android:paddingHorizontal="5dp"
+            app:component_title_information="@string/publisher"
+            app:layout_constraintBottom_toTopOf="@id/component_release_date"
+            app:layout_constraintStart_toEndOf="@id/component_developer"
+            app:layout_constraintEnd_toStartOf="@id/component_platform"
+            app:layout_constraintTop_toBottomOf="@id/tv_additional_information" />
+
+        <br.com.cwi.freegames.presentation.component.GameInformationComponent
+            android:id="@+id/component_platform"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="5dp"
+            app:component_title_information="@string/platform"
+            app:layout_constraintBottom_toTopOf="@id/component_genre"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/ll_publisher"
-            app:layout_constraintTop_toTopOf="@id/ll_developer">
+            app:layout_constraintStart_toEndOf="@id/component_publisher"
+            app:layout_constraintTop_toTopOf="@id/component_developer" />
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/platform"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/platform"
-                android:textSize="18sp"
-                android:textColor="@color/grey_light"
-                android:gravity="center" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_game_platform"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:gravity="center"
-                tools:text="teste" />
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/ll_release_date"
+        <br.com.cwi.freegames.presentation.component.GameInformationComponent
+            android:id="@+id/component_release_date"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="20dp"
-            android:gravity="center"
-            app:layout_constraintEnd_toStartOf="@id/ll_genre"
-            app:layout_constraintTop_toBottomOf="@id/ll_developer"
-            app:layout_constraintStart_toStartOf="parent">
+            android:paddingHorizontal="5dp"
+            app:component_title_information="@string/release_date"
+            app:layout_constraintEnd_toStartOf="@id/component_genre"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/component_developer"
+            app:layout_constraintStart_toStartOf="parent"/>
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_release_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/release_date"
-                android:textSize="18sp"
-                android:textColor="@color/grey_light"
-                android:gravity="center" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_game_release_date"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:gravity="center"
-                tools:text="10/12/21" />
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/ll_genre"
+        <br.com.cwi.freegames.presentation.component.GameInformationComponent
+            android:id="@+id/component_genre"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="5dp"
+            app:component_title_information="@string/genre"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/ll_release_date"
-            app:layout_constraintStart_toEndOf="@id/ll_release_date">
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_genre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/genre"
-                android:textSize="18sp"
-                android:textColor="@color/grey_light"
-                android:gravity="center" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_game_genre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textSize="18sp"
-                android:gravity="center"
-                tools:text="teste" />
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
+            app:layout_constraintBottom_toBottomOf="@id/component_release_date"
+            app:layout_constraintTop_toTopOf="@id/component_release_date"
+            app:layout_constraintStart_toEndOf="@id/component_release_date"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

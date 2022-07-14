@@ -88,31 +88,31 @@ class GameDetailsFragment : Fragment() {
     }
 
     private fun bindGameViewAdditionalInfo(game: Game) {
-        val tvGameDeveloper = binding.viewAdditionalInfo.tvGameDeveloper
-        val tvGamePublisher = binding.viewAdditionalInfo.tvGamePublisher
-        val tvGamePlatform = binding.viewAdditionalInfo.tvGamePlatform
-        val tvGameReleaseDate = binding.viewAdditionalInfo.tvGameReleaseDate
-        val tvGameGenre = binding.viewAdditionalInfo.tvGameGenre
+        val componentDeveloper = binding.viewAdditionalInfo.componentDeveloper
+        val componentPublisher = binding.viewAdditionalInfo.componentPublisher
+        val componentPlatform = binding.viewAdditionalInfo.componentPlatform
+        val componentReleaseDate = binding.viewAdditionalInfo.componentReleaseDate
+        val componentGenre = binding.viewAdditionalInfo.componentGenre
 
-        tvGameDeveloper.text = game.developer
-        tvGamePublisher.text = game.publisher
-        tvGamePlatform.text = game.platform
-        tvGameReleaseDate.text = game.release_date
-        tvGameGenre.text = game.genre
+        componentDeveloper.bindGameInfo(game.developer)
+        componentPublisher.bindGameInfo(game.publisher)
+        componentPlatform.bindGameInfo(game.platform)
+        componentReleaseDate.bindGameInfo(game.release_date)
+        componentGenre.bindGameInfo(game.genre)
     }
 
     private fun bindGameSystemRequirements(game: Game) {
-        val tvGameOs = binding.viewMinSystemRequirements.tvGameOs
-        val tvGameProcessor = binding.viewMinSystemRequirements.tvGameProcessor
-        val tvGameStorage = binding.viewMinSystemRequirements.tvGameStorage
-        val tvGameMemory = binding.viewMinSystemRequirements.tvGameMemory
-        val tvGameGraphics = binding.viewMinSystemRequirements.tvGameGraphics
+        val componentOs = binding.viewMinSystemRequirements.componentOs
+        val componentProcessor = binding.viewMinSystemRequirements.componentProcessor
+        val componentStorage = binding.viewMinSystemRequirements.componentStorage
+        val componentMemory = binding.viewMinSystemRequirements.componentMemory
+        val componentGraphics = binding.viewMinSystemRequirements.componentGraphics
 
-        tvGameOs.text = game.min_system_requirements?.os
-        tvGameProcessor.text = game.min_system_requirements?.processor
-        tvGameStorage.text = game.min_system_requirements?.storage
-        tvGameMemory.text = game.min_system_requirements?.memory
-        tvGameGraphics.text = game.min_system_requirements?.graphics
+        componentOs.bindGameInfo(game.min_system_requirements?.os)
+        componentProcessor.bindGameInfo(game.min_system_requirements?.processor)
+        componentStorage.bindGameInfo(game.min_system_requirements?.storage)
+        componentMemory.bindGameInfo(game.min_system_requirements?.memory)
+        componentGraphics.bindGameInfo(game.min_system_requirements?.graphics)
     }
 
     private fun setPlayLaterIcon(game: Game){
