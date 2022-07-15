@@ -19,15 +19,11 @@ class PlayLaterRepositoryImpl(
     }
 
     override fun getAllGames(): MutableList<Game>? {
-        return  dao.getAllGames()?.map {
-            it.toGame()
-        }?.toMutableList()
+        return  dao.getAllGames()?.toGame()
     }
 
     override fun getFilteredTitleGames(word: String?): MutableList<Game>? {
-        return dao.getFilteredTitleGames(word)?.map {
-            it.toGame()
-        }?.toMutableList()
+        return dao.getFilteredTitleGames(word)?.toGame()
     }
 
 }

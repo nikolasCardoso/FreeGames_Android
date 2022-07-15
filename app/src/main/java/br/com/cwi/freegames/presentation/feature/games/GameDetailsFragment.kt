@@ -13,6 +13,7 @@ import br.com.cwi.freegames.R
 import br.com.cwi.freegames.databinding.FragmentGameDetailsBinding
 import br.com.cwi.freegames.domain.constants.GameConstants
 import br.com.cwi.freegames.domain.entity.Game
+import br.com.cwi.freegames.presentation.extension.visibleOrGone
 import com.bumptech.glide.Glide
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
@@ -46,13 +47,7 @@ class GameDetailsFragment : Fragment() {
         viewModel.gameDetails.observe(viewLifecycleOwner) { game ->
             bindGameViewBase(game)
             bindGameViewAdditionalInfo(game)
-
-            if(game.min_system_requirements == null)
-                binding.viewMinSystemRequirements.root.visibility = View.GONE
-            else{
-                binding.viewMinSystemRequirements.root.visibility = View.VISIBLE
-                bindGameSystemRequirements(game)
-            }
+            bindGameSystemRequirements(game)
         }
 
         viewModel.fetchGameDetails(gameId)
@@ -102,6 +97,7 @@ class GameDetailsFragment : Fragment() {
     }
 
     private fun bindGameSystemRequirements(game: Game) {
+        val systemRequirements = binding.viewMinSystemRequirements.root
         val componentOs = binding.viewMinSystemRequirements.componentOs
         val componentProcessor = binding.viewMinSystemRequirements.componentProcessor
         val componentStorage = binding.viewMinSystemRequirements.componentStorage
@@ -113,6 +109,8 @@ class GameDetailsFragment : Fragment() {
         componentStorage.bindGameInfo(game.min_system_requirements?.storage)
         componentMemory.bindGameInfo(game.min_system_requirements?.memory)
         componentGraphics.bindGameInfo(game.min_system_requirements?.graphics)
+
+        systemRequirements.visibleOrGone(viewModel.isSystemRequirementsNotNull(game))
     }
 
     private fun setPlayLaterIcon(game: Game){

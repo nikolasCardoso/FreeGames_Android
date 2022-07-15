@@ -20,6 +20,8 @@ fun GameResponse.toDomain() = Game(
     min_system_requirements = null
 )
 
+fun List<GameResponse>.toDomain() = this.map { gameResponse -> gameResponse.toDomain() }
+
 fun GameDetailsResponse.toDomain() = Game(
     id = id,
     title = title,
@@ -27,11 +29,11 @@ fun GameDetailsResponse.toDomain() = Game(
     genre = genre,
     description = description,
     platform = platform,
-    game_url = game_url,
+    game_url = gameUrl,
     publisher = publisher,
     developer = developer,
-    release_date = release_date,
-    min_system_requirements = min_system_requirements?.toDomain()
+    release_date = releaseDate,
+    min_system_requirements = minSystemRequirements?.toDomain()
 )
 
 fun MinSystemRequirementsResponse.toDomain() = GameMinSystemRequirements(

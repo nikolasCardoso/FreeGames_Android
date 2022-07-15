@@ -51,4 +51,8 @@ class GamesViewModel(
         }
     }
 
+    fun isSystemRequirementsNotNull(game: Game): Boolean {
+        return game.min_system_requirements != null
+    }
+
 }

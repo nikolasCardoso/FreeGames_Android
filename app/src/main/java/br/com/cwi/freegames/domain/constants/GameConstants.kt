@@ -5,5 +5,4 @@ object GameConstants {
     const val WINDOWS_PLATFORM = "Windows"
     const val BROWSER_PLATFORM = "Web Browser"
     const val GAME_ID = "GAME_ID"
-    const val DEVELOPER_INFO = "DEVELOPER_INFO"
 }

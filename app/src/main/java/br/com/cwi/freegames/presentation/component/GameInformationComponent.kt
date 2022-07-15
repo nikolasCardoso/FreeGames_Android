@@ -18,9 +18,7 @@ class GameInformationComponent : ConstraintLayout {
 
         context.obtainStyledAttributes(
             attrs,
-            R.styleable.GameInformationComponent,
-            0,
-            0
+            R.styleable.GameInformationComponent
         ).run {
             binding.tvNameInfo.text =
                 getString(R.styleable.GameInformationComponent_component_title_information)

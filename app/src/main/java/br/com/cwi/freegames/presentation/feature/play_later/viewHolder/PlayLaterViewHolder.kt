@@ -35,8 +35,8 @@ class PlayLaterViewHolder(
 
         with(ivRemove){
             setOnClickListener {
-                onRemoveClick(item)
                 onItemRemoved()
+                onRemoveClick(item)
             }
         }
     }

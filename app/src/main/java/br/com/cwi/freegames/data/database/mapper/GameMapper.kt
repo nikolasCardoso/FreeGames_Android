@@ -17,6 +17,10 @@ fun GameEntity.toGame() = Game(
     min_system_requirements = null
 )
 
+fun MutableList<GameEntity>.toGame(): MutableList<Game>{
+    return this.map { gameEntity -> gameEntity.toGame() }.toMutableList()
+}
+
 fun Game.toEntity() = GameEntity(
     id, title, thumbnail , genre, description, platform
 )

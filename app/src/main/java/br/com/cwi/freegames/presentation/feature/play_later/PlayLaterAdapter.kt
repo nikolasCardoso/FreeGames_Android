@@ -28,6 +28,7 @@ class PlayLaterAdapter(
         holder.bind(item, onItemRemoved = {
             gamesList.remove(item)
             notifyItemRemoved(position)
+            notifyItemChanged(position)
         })
     }
 

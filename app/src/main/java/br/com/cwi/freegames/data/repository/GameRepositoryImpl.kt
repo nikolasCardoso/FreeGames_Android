@@ -13,9 +13,7 @@ class GameRepositoryImpl(
 
     override suspend fun getGames(): List<Game> {
         return withContext(Dispatchers.IO){
-            api.getGames().map { game ->
-                game.toDomain()
-            }
+            api.getGames().toDomain()
         }
     }
 
